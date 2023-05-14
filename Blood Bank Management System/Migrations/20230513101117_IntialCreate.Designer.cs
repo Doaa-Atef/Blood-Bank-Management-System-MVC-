@@ -12,8 +12,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blood_Bank_Management_System.Migrations
 {
     [DbContext(typeof(BloodBankDbContext))]
+<<<<<<<< HEAD:Blood Bank Management System/Migrations/20230513225049_BloodBankM.Designer.cs
+    [Migration("20230513225049_BloodBankM")]
+    partial class BloodBankM
+========
     [Migration("20230513101117_IntialCreate")]
     partial class IntialCreate
+>>>>>>>> 281406d162702d2949f6cc750904d7bbfb7de730:Blood Bank Management System/Migrations/20230513101117_IntialCreate.Designer.cs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +29,29 @@ namespace Blood_Bank_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+<<<<<<<< HEAD:Blood Bank Management System/Migrations/20230513225049_BloodBankM.Designer.cs
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.BloodBank", b =>
+                {
+                    b.Property<int>("BloodBankId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BloodBankEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("BloodBankQuantity")
+                        .HasColumnType("real");
+
+                    b.Property<int>("BloodGroup")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusOfBlood")
+                        .HasColumnType("int");
+
+                    b.HasKey("BloodBankId");
+
+                    b.ToTable("BloodBanks");
+========
             modelBuilder.Entity("Blood_Bank_Management_System.Models.Donor", b =>
                 {
                     b.Property<string>("DonorID")
@@ -58,6 +86,7 @@ namespace Blood_Bank_Management_System.Migrations
                     b.HasKey("DonorID");
 
                     b.ToTable("Donors");
+>>>>>>>> 281406d162702d2949f6cc750904d7bbfb7de730:Blood Bank Management System/Migrations/20230513101117_IntialCreate.Designer.cs
                 });
 
             modelBuilder.Entity("Blood_Bank_Management_System.Models.Employee", b =>

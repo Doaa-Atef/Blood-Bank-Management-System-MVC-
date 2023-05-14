@@ -5,11 +5,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Blood_Bank_Management_System.Migrations
 {
-    public partial class IntialCreate : Migration
+    public partial class BloodBankM : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+<<<<<<<< HEAD:Blood Bank Management System/Migrations/20230513225049_BloodBankM.cs
+                name: "BloodBanks",
+                columns: table => new
+                {
+                    BloodBankId = table.Column<int>(type: "int", nullable: false),
+                    BloodBankEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BloodGroup = table.Column<int>(type: "int", nullable: false),
+                    BloodBankQuantity = table.Column<float>(type: "real", nullable: false),
+                    StatusOfBlood = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BloodBanks", x => x.BloodBankId);
+========
                 name: "Donors",
                 columns: table => new
                 {
@@ -25,6 +39,7 @@ namespace Blood_Bank_Management_System.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Donors", x => x.DonorID);
+>>>>>>>> 281406d162702d2949f6cc750904d7bbfb7de730:Blood Bank Management System/Migrations/20230513101117_IntialCreate.cs
                 });
 
             migrationBuilder.CreateTable(
@@ -67,7 +82,11 @@ namespace Blood_Bank_Management_System.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+<<<<<<<< HEAD:Blood Bank Management System/Migrations/20230513225049_BloodBankM.cs
+                name: "BloodBanks");
+========
                 name: "Donors");
+>>>>>>>> 281406d162702d2949f6cc750904d7bbfb7de730:Blood Bank Management System/Migrations/20230513101117_IntialCreate.cs
 
             migrationBuilder.DropTable(
                 name: "Employees");
